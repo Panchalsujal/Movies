@@ -1,0 +1,160 @@
+$primary: #ff7a18;
+$secondary: #ff3c7e;
+$bg1: #3b0a45;
+$bg2: #5a0f4d;
+$text-light: #ffffff;
+$text-muted: rgba(255, 255, 255, 0.7);
+$radius: 12px;
+
+// PAGE BACKGROUND
+.register-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+  width: 100%;
+
+  background: radial-gradient(circle at top, #6a0d45, #2b0035);
+}
+
+// MAIN PANEL
+.register-wrapper {
+  width: 100%;
+  max-width: 1100px;
+  min-height: 600px;
+
+  border-radius: $radius;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  background: linear-gradient(120deg, $bg1, $bg2);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
+}
+
+// LEFT INFO SECTION
+.register-info {
+  flex: 1;
+  padding: 4rem;
+  color: $text-light;
+
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  p{
+    margin-top: 1rem;
+    color: $primary;
+    max-width: 350px;
+  }
+
+  .learn-btn {
+    margin-top: 2rem;
+    padding: 0.6rem 1.6rem;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    background: linear-gradient(90deg, $primary, $secondary);
+  }
+}
+
+// REGISTER FORM CARD
+.register-card {
+  width: 360px;
+  padding: 2.5rem;
+  margin-right: 80px;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  text-align: center;
+  color: white;
+
+  h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+}
+
+// FORM GROUP
+.form-group {
+  margin-bottom: 1.3rem;
+  text-align: left;
+
+  label {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  input,
+  select {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    margin-top: 6px;
+
+    border-radius: 20px;
+    border: none;
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+}
+
+// REGISTER BUTTON
+.btn {
+  width: 100%;
+  padding: 0.7rem;
+  margin-top: 1rem;
+
+  border: none;
+  border-radius: 20px;
+
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+
+  background: linear-gradient(90deg, $primary, $secondary);
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+// MOBILE RESPONSIVE
+@media (max-width: 768px) {
+  .register-wrapper {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem;
+  }
+
+  .register-info {
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .register-card {
+    margin: 0;
+    width: 100%;
+    margin-top: 2rem;
+  }
+}

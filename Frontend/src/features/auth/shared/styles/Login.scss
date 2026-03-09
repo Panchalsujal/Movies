@@ -1,0 +1,181 @@
+$primary: #ff7a18;
+$secondary: #ff3c7e;
+$bg1: #3b0a45;
+$bg2: #5a0f4d;
+$text-light: #ffffff;
+$text-muted: rgba(255, 255, 255, 0.7);
+$radius: 12px;
+
+// Page background
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+  width: 100%;
+
+  background: radial-gradient(circle at top, #6a0d45, #2b0035);
+}
+
+// Main big panel
+.login-wrapper {
+  width: 100%;
+  max-width: 1100px;
+  min-height: 520px; // change from height
+  position: relative;
+
+  border-radius: 12px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  background: linear-gradient(120deg, #3b0a45, #5a0f4d);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
+}
+
+// LEFT SIDE
+.welcome-section {
+  flex: 1;
+  padding: 4rem;
+  color: $text-light;
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-top: 1rem;
+    color: $text-muted;
+    max-width: 350px;
+  }
+
+  .learn-btn {
+    margin-top: 2rem;
+    padding: 0.6rem 1.6rem;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    background: linear-gradient(90deg, $primary, $secondary);
+  }
+}
+
+// LOGIN BOX
+.login-form {
+  width: 340px;
+  padding: 2.5rem;
+  margin-right: 80px;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  text-align: center;
+  color: white;
+
+  h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+}
+
+// INPUTS
+.form-group {
+  margin-bottom: 1.3rem;
+  text-align: left;
+
+  label {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  input {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    margin-top: 6px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+  }
+}
+
+// SUBMIT BUTTON
+.submit-btn {
+  width: 100%;
+  padding: 0.7rem;
+  margin-top: 1rem;
+
+  border: none;
+  border-radius: 1rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+
+  background: linear-gradient(90deg, $primary, $secondary);
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+// SOCIAL
+.social-login {
+  margin-top: 1.5rem;
+
+  i {
+    margin: 0 10px;
+    cursor: pointer;
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+// MOBILE
+@media (max-width: 768px) {
+  .login-wrapper {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem;
+  }
+
+  .welcome-section {
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .login-form {
+    margin: 0;
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+
+.form-text {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  gap: 4px;
+
+  a {
+    color: $primary;
+    text-decoration: none;
+    font-size: 1.2rem;
+  
+
+    &:hover {
+      text-decoration: underline;
+      
+    }
+  }
+}
