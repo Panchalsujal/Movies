@@ -3,6 +3,7 @@ import Login from "../auth/Pages/login.jsx";
 import Register from "../auth/Pages/register.jsx";
 import Home from "../../features/movies/pages/Home.jsx";
 import Protected from "../auth/components/Protect.jsx";
+import Movie from "../movies/pages/movie.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -18,6 +19,7 @@ export const router = createBrowserRouter([
     element: (
       <Protected>
         <Home />
+        <Movie />
       </Protected>
     ),
   },
